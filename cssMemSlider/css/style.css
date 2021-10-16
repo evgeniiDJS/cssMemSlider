@@ -2,7 +2,6 @@
 	margin: 0;
 	padding: 0;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
 }
@@ -13,7 +12,7 @@ body {
 
 .wrapper {
 	height: 450px;
-	margin: 100px auto 0;
+	margin: 40px auto 0;
 	position: relative;
 	width: 1000px;
 }
@@ -25,7 +24,6 @@ body {
 	position: relative;
 	width: inherit;
 	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 	-o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
@@ -55,7 +53,6 @@ body {
 	position: relative;
 	width: 8px;
 	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
 }
@@ -72,25 +69,21 @@ body {
 	top: -4px;
 	width: 12px;
 	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
 	border-radius: 50%;
 }
 
 .wrapper label {
+    background: rgb(122, 102, 235);
 	cursor: pointer;
 	display: inline-block;
 	height: 8px;
-	margin: 25px 12px 0 16px;
+	margin: 35px 22px 0 16px;
 	position: relative;
 	width: 8px;
 	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
 	-webkit-transition: background ease-in-out .5s;
-	-moz-transition: background ease-in-out .5s;
-	-o-transition: background ease-in-out .5s;
 	transition: background ease-in-out .5s;
 }
 
@@ -100,7 +93,7 @@ body {
 #slide3:checked ~ .controls label:nth-of-type(3),
 #slide4:checked ~ .controls label:nth-of-type(4),
 #slide5:checked ~ .controls label:nth-of-type(5) {
-	background: rgb(122, 102, 235);
+	background: none;
 }
 
 .slides {
@@ -130,4 +123,11 @@ body {
 	-moz-transform: scale(1);
 	-o-transform: scale(1);
 	transform: scale(1);
+}
+
+#slide1:checked ~ .slider > .slide1::after {
+    content: "ff";
+    position:absolute;
+    top: 350px;
+    left: 50px;
 }
