@@ -39,9 +39,15 @@ body {
 .slide3 { background-image: url("../assets/img/slide3.jpg"); }
 .slide4 { background-image: url("../assets/img/slide4.jpg"); }
 
+.slide1, .slide2, .slide3, .slide4  {
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
 .wrapper .controls {
 	left: 60%;
 	margin-left: 200px;
+	padding-bottom: 50px;
 	position: absolute;
 }
 
@@ -126,8 +132,56 @@ body {
 }
 
 #slide1:checked ~ .slider > .slide1::after {
-    content: "ff";
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 22px;
+    content: "I,m best of the best!";
     position:absolute;
-    top: 350px;
+	top: 400px;
     left: 50px;
 }
+#slide2:checked ~ .slider > .slide2::after {
+    font-family: 'Times New Roman', Times, serif;
+	font-size: 22px;
+    content: "I,m best of the best of the best!!!";
+    position:absolute;
+    top: 400px;
+    left: 50px;
+}
+#slide3:checked ~ .slider > .slide3::after {
+    font-family: 'Times New Roman', Times, serif;
+	font-size: 22px;
+    content: "I,m best of the best!";
+    position:absolute;
+    top: 400px;
+    left: 50px;
+}
+#slide4:checked ~ .slider > .slide4::after {
+    font-family: 'Times New Roman', Times, serif;
+	font-size: 22px;
+    content: "Don't stop!";
+    position:absolute;
+    top: 400px;
+    left: 50px;
+}
+
+
+
+
+/* Adaptive */
+
+
+@media screen and (max-width: 1199px) {
+	.slider {
+		width: 70%;
+		height: 70%;
+		position: static;
+		margin: 0 auto
+	}
+	.wrapper .controls  {
+		left: 46%;
+		margin-left: 200px;
+		padding-bottom: 50px;
+		position: absolute;
+	}
+}
+
